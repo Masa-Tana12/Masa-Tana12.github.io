@@ -95,8 +95,16 @@
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
         border-radius: 0.5em;/*角丸*/">
-            <p>ポーカー<img src= "toranp.jfif" height = "90px"><br>「f5キー」を押してください。</p>
+           <div class="wrapper1">
+    <p>ポーカー</button><img src= "toranp.jfif" height = "90px"><br>「ポーカーをする」をクリックしてください。</p>
+    <div class="wrapper1-button1">
+      <button id="button1" class="button1">ポーカーをする
         <table border="1">
+            </div>
+    <p id="result1"></p>
+  </div>
+</body>
+ </table>
             <tr>
                 <td>
                     <script type="text/JavaScript">
@@ -110,7 +118,7 @@
       for(var data in list){
         rate += list[data];
         if(random <= rate){
-          document.getElementById("result").textContent = data;
+          document.getElementById("result2").textContent = data;
           return;
         }
       }
@@ -189,6 +197,8 @@
             }else{
                 document.write('ノーハンド');
             }
+             document.getElementById("result1").textContent = data;
+          return;
             
             </script>
              </div>
@@ -205,7 +215,7 @@
     <div class="wrapper-button">
       <button id="button" class="button">おみくじを引く
     </div>
-    <p id="result"></p>
+    <p id="result2"></p>
   </div>
 </body>
  </table>
