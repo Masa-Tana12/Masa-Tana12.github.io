@@ -125,30 +125,6 @@
          <br>
          <br>=========================================================================================================<br>
          <br>
-	      <div style="color: #364e96;/*文字色*/
-        border: solid 3px #364e96;/*線色*/
-        padding: 0.5em;/*文字周りの余白*/
-        border-radius: 0.5em;/*角丸*/">
-
-<body>
-  <div class="wrapper">
-    <p>おみくじ</button><img src= "omikuzi.jfif" height = "90px"><br>「おみくじを引く」をクリックしてください。</p>
-    <div class="wrapper-button">
-      <button id="button" class="button">おみくじを引く
-    </div>
-    <p id="result2"></p>
-  </div>
-</body>
- </table>
-            </script></b></div>
-       <div style="color: #364e96;/*文字色*/
-        border: solid 3px #364e96;/*線色*/
-        padding: 0.5em;/*文字周りの余白*/
-        border-radius: 0.5em;/*角丸*/">
-            <p>ポーカー<img src= "toranp.jfif" height = "90px"><br>「f5キーを押す、またはページ更新する」と遊ぶことができます。</p>
-        <table border="1">
-            <tr>
-                <td>
 	     <div style="color: #364e96;/*文字色*/
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
@@ -159,7 +135,6 @@
  <p>スロット</a><img src= "slot.jfif" height = "90px">
 	    <br>「おす」をクリックしてください。(リセットをクリックすると再度遊ぶことができます。)
 	    <br>表示形式...[－,●,■,♪,☆,★]</p>
-		                    <!=============game Souse Code==================>
 <hr>
 <form name="slot">
 <table border="2">
@@ -167,17 +142,17 @@
 		<th colspan="3"><div id="score">0点</div></th>
 	</tr>
 	<tr>
-		<td><p><div id="dram0">☆</p></div></td>
-		<td><p><div id="dram1">☆</p></div></td>
-		<td><p><div id="dram2">☆</p></div></td>
+		<td><div id="dram0">☆</div></td>
+		<td><div id="dram1">☆</div></td>
+		<td><div id="dram2">☆</div></td>
 	</tr>
 	<tr>
-		<td><p><input type="button" value="おす" onClick="dramstop(0)"></p></td>
-		<td><p><input type="button" value="おす" onClick="dramstop(1)"></p></td>
-		<td><p><input type="button" value="おす" onClick="dramstop(2)"></p></td>
+		<td><input type="button" value="おす" onClick="dramstop(0)"></td>
+		<td><input type="button" value="おす" onClick="dramstop(1)"></td>
+		<td><input type="button" value="おす" onClick="dramstop(2)"></td>
 	</tr>
 <tr>
-		<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"><p></td>
+		<td colspan="3"><input type="button" value="リセット" onClick="dramreset()"></td>
 	</tr>
 </table>
 </form>
@@ -208,6 +183,31 @@ scr += r;
 <br><br>
  </table>
   </b></div>
+           <div style="color: #364e96;/*文字色*/
+        border: solid 3px #364e96;/*線色*/
+        padding: 0.5em;/*文字周りの余白*/
+        border-radius: 0.5em;/*角丸*/">
+
+<body>
+  <div class="wrapper">
+    <p>おみくじ</button><img src= "omikuzi.jfif" height = "90px"><br>「おみくじを引く」をクリックしてください。</p>
+    <div class="wrapper-button">
+      <button id="button" class="button">おみくじを引く
+    </div>
+    <p id="result2"></p>
+  </div>
+</body>
+ </table>
+            </script></b></div>
+       <div style="color: #364e96;/*文字色*/
+        border: solid 3px #364e96;/*線色*/
+        padding: 0.5em;/*文字周りの余白*/
+        border-radius: 0.5em;/*角丸*/">
+            <p>ポーカー<img src= "toranp.jfif" height = "90px"><br>「f5キーを押す、またはページ更新する」と遊ぶことができます。</p>
+        <table border="1">
+            <tr>
+                <td>
+                    <!=============game Souse Code==================>
                     <script type="text/JavaScript">
       window.onload = function () {
     const list = {"大吉" : 5,"吉" : 20,"中吉" : 15,"小吉" : 10,"末吉" :20,"凶" : 15,"大凶" : 15,
