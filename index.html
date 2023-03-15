@@ -115,7 +115,7 @@
          <br>=========================================================================================================<br>
          <br>　ミニゲーム...{おみくじ/スロット/ポーカー}
          <br>　※おみくじ…「おみくじを引く」をクリックすると引くことができます。
-	 <br>　※スロット… 「おす」をクリックすると遊ぶことができます。（リセットをクリックすると再度遊ぶことができます。）
+	 <br>　※スロット… 「〇」をクリックすると遊ぶことができます。（リセットをクリックすると再度遊ぶことができます。）
          <br>　※ポーカー… 「f5キーを押す、またはページ更新する」と遊ぶことができます。<br>
          <br>　マリオ...(play game...)
          <br>　※マリオ…「Let`s play Mario♪」のリンクをクリックすると遊ぶことができます。<br>
@@ -149,7 +149,7 @@
 </head>
 <body>
  <p>スロット</a><img src= "slot.jfif" height = "90px">
-	    <br>「おす」をクリックしてください。(リセットをクリックすると再度遊ぶことができます。)
+	    <br>「〇」をクリックしてください。(リセットをクリックすると再度遊ぶことができます。)
 	    <br>表示形式...[－,●,■,♪,☆,★]</p>
 <hr>
 <form name="slot">
@@ -163,9 +163,9 @@
 		<td><p><div id="dram2">☆</p></div></td>
 	</tr>
 	<tr>
-		<td><p><input type="button" value="おす" onClick="dramstop(0)"></p></td>
-		<td><p><input type="button" value="おす" onClick="dramstop(1)"></p></td>
-		<td><p><input type="button" value="おす" onClick="dramstop(2)"></p></td>
+		<td><p><input type="button" value="〇" onClick="dramstop(0)"></p></td>
+		<td><p><input type="button" value="〇" onClick="dramstop(1)"></p></td>
+		<td><p><input type="button" value="〇" onClick="dramstop(2)"></p></td>
 	</tr>
 <tr>
 	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
@@ -211,11 +211,11 @@ scr += r;
                     <!=============omikuji game Souse Code==================>
                     <script type="text/JavaScript">
       window.onload = function () {
-    const list = {"大吉" : 5,"吉" : 20,"中吉" : 15,"小吉" : 10,"末吉" :20,"凶" : 15,"大凶" : 15,
+    const list = {"大吉","吉","中吉","小吉","末吉","凶","大凶",
     };
 
     document.getElementById("button").onclick = function () {
-      var random = Math.floor(Math.random() * 100);
+      var random = Math.floor(Math.random() * 7;
       var rate = 0;
       for(var data in list){
         rate += list[data];
