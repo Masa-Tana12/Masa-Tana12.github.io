@@ -214,8 +214,10 @@ scr += r;
     const list = {"大吉","吉","中吉","小吉","末吉","凶","大凶",
     };
 
+    const list = {"大吉" : 14,"吉" : 14,"中吉" : 14,"小吉" : 15,"末吉" :15,"凶" : 14,"大凶" : 14,
+    };
     document.getElementById("button").onclick = function () {
-      var random = Math.floor(Math.random() * 7+1;
+      var random = Math.floor(Math.random() * 100);
       var rate = 0;
       for(var data in list){
         rate += list[data];
