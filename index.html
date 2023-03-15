@@ -124,6 +124,55 @@
          <br>
          <br>=========================================================================================================<br>
          <br>
+        <title>スロットゲーム</title>
+</head>
+<body>
+<h3>スロットゲーム</h3>
+<hr>
+<form name="slot">
+<table border="2">
+<tr>
+		<th colspan="3"><div id="score">0点</div></th>
+	</tr>
+	<tr>
+		<td><div id="dram0">☆</div></td>
+		<td><div id="dram1">☆</div></td>
+		<td><div id="dram2">☆</div></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="おす" onClick="dramstop(0)"></td>
+		<td><input type="button" value="おす" onClick="dramstop(1)"></td>
+		<td><input type="button" value="おす" onClick="dramstop(2)"></td>
+	</tr>
+<tr>
+		<td colspan="3"><input type="button" value="リセット" onClick="dramreset()"></td>
+	</tr>
+</table>
+</form>
+
+<script type="text/javascript">
+img = new Array("－","●","■","♪","☆","★");
+dramreset();
+ 
+function dramreset() {
+document.getElementById("dram0").innerHTML = img[0];
+document.getElementById("dram1").innerHTML = img[0];
+document.getElementById("dram2").innerHTML = img[0];
+document.slot.elements[0].disabled = false;
+	document.slot.elements[1].disabled = false;
+	document.slot.elements[2].disabled = false;
+scr = 0;
+}
+
+function dramstop(btn) {
+	r = Math.floor(Math.random() * 6);
+	document.getElementById("dram"+btn).innerHTML = img[r];
+document.slot.elements[btn].disabled = true;
+scr += r;
+	document.getElementById("score").innerHTML = scr + "点";
+}
+</script>
+</body>
            <div style="color: #364e96;/*文字色*/
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
