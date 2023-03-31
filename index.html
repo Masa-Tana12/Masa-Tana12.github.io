@@ -80,7 +80,6 @@
 	</b>
 	<br>
      <!====趣味画像====>
-	 <link rel="stylesheet" href="slider.css">
 	<div class="slider">
         <div class="slider-inner">
   <ul>
@@ -122,12 +121,45 @@
   </li></div>
 </ul>
 <style>
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
   li {
     list-style: none;
   }
+
+  li:nth-child(2) {
+    margin: 0 10px;
+  }
+.slider {
+　　overflow: hidden;
+　　margin: 0 auto;
+
+}
+.slider-item {
+  float: left;
+}
+.slider-inner {
+  animation: slider 10s infinite ease;
+}
+
+@keyframes slider {
+	0% {
+	transform: translateX(0);
+	}
+	33% {
+	transform: translateX(-300px);
+	}
+	66% {
+	transform: translateX(-600px);
+	}
+	100% {
+	transform: translateX(0);
+	}
+}
 </style>
- </div>
- </div>
  </div>
 </div>
 <br>
