@@ -81,69 +81,110 @@
 	<br>
      <!====趣味画像====>
 	<div id="rounded">
-	<div class="slider">
-        <div class="slider-inner">
-  <ul>
-  <div class="slider-item">
+	<div class="d-demo">
+   <div class="d-demo__wrap">
+       <ul class="d-demo__list d-demo__list--left">
+  <li class="d-demo__item">
 	  <li>
 	  <img src="baseball.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+  <li class="d-demo__item">
 	  <li>
 	  <img src="golf.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item"><li>
+ <li class="d-demo__item">
+	  <li>
 	  <img src="dorm.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+  <li class="d-demo__item">
 	  <li>
 	  <img src="gandam.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+ <li class="d-demo__item">
 	  <li>
 	  <img src="drawing.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="anime.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="cinema.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="anison.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="genshin.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="monhan_a.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="trip.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
-  <div class="slider-item">
+<li class="d-demo__item">
 	  <li>
 	  <img src="eating.jfif" img-size: 40%; alt="" />
   </li>
-	  </div>
 </ul>
+	 <ul class="d-demo__list d-demo__list--left">
+<li class="d-demo__item">
+	  <li>
+	  <img src="baseball.jfif" img-size: 40%; alt="" />
+  </li>
+  <li class="d-demo__item">
+	  <li>
+	  <img src="golf.jfif" img-size: 40%; alt="" />
+  </li>
+ <li class="d-demo__item">
+	  <li>
+	  <img src="dorm.jfif" img-size: 40%; alt="" />
+  </li>
+  <li class="d-demo__item">
+	  <li>
+	  <img src="gandam.jfif" img-size: 40%; alt="" />
+  </li>
+ <li class="d-demo__item">
+	  <li>
+	  <img src="drawing.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="anime.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="cinema.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="anison.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="genshin.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="monhan_a.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="trip.jfif" img-size: 40%; alt="" />
+  </li>
+<li class="d-demo__item">
+	  <li>
+	  <img src="eating.jfif" img-size: 40%; alt="" />
+  </li>
+	  </ul>
+   </div>
+</div>
 <style>
   ul {
     display: flex;
@@ -160,31 +201,64 @@
   #rounded img {
   border-radius: 5px;
 }
-.slider {
-	overflow: hidden;
-	margin: 0 auto;
-
-}
-.slider-item {
-  float: left;
-}
-.slider-inner {
-  animation: slider 10s infinite ease;
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-@keyframes slider {
-	0% {
-	transform: translateX(0);
-	}
-	33% {
-	transform: translateX(-300px);
-	}
-	66% {
-	transform: translateX(-600px);
-	}
-	100% {
-	transform: translateX(0);
-	}
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 95s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+  width: calc(100vw / 6);
+}
+.d-demo__item > img{
+   width: 100%;
+}
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.d-demo__list--right{
+animation :infinity-scroll-right 95s infinite linear 0.5s both;
+}
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+.demo__wrap:hover .d-demo__list--left{
+  animation-play-state: paused;
 }
 </style>
  </div>
