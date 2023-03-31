@@ -1,0 +1,26 @@
+.slider {
+　　overflow: hidden;
+　　margin: 0 auto;
+
+}
+.slider-item {
+  float: left;
+}
+.slider-inner {
+  animation: slider 10s infinite ease;
+}
+
+@keyframes slider {
+	0% {
+	transform: translateX(0);
+	}
+	33% {
+	transform: translateX(-300px);
+	}
+	66% {
+	transform: translateX(-600px);
+	}
+	100% {
+	transform: translateX(0);
+	}
+}
