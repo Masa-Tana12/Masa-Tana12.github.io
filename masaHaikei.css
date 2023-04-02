@@ -4,107 +4,138 @@ body {
    background-attachment: fixed;
   }
 <!=================================>
-#sakura_block{
+ @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap');
+
+html {
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#00bfff, #fff);
 }
-#sakura_block .sakura_parts_box{
-  position: relative;
-}
-#sakura_block .sakura_parts_box img{
+
+.sakura {
   position: absolute;
-}
-#sakura_block .sakura_parts_box img:nth-child(2n+1){
-  width: 13px;/*花びらのサイズ*/
-}
-#sakura_block .sakura_parts_box img:nth-child(2n){
-  width: 15px;/*花びらのサイズ*/
-}
-
-/*-----------------------------------
-桜の花びらパーツの表示位置
------------------------------------*/
-img.parts_01{top: 0; left: 5%;}
-img.parts_02{top: 0; left: 12%;}
-img.parts_03{top: 0; left: 15%;}
-img.parts_04{top: 0; left: 22%;}
-img.parts_05{top: 0; left: 25%;}
-img.parts_06{top: 0; left: 28%;}
-img.parts_07{top: 0; left: 35%;}
-img.parts_08{top: 0; left: 40%;}
-img.parts_09{top: 0; left: 43%;}
-img.parts_10{top: 0; left: 50%;}
-img.parts_11{top: 0; left: 55%;}
-img.parts_12{top: 0; left: 60%;}
-img.parts_13{top: 0; left: 63%;}
-img.parts_14{top: 0; left: 70%;}
-img.parts_15{top: 0; left: 75%;}
-img.parts_16{top: 0; left: 81%;}
-img.parts_17{top: 0; left: 85%;}
-img.parts_18{top: 0; left: 90%;}
-img.parts_19{top: 0; left: 93%;}
-
-
-/*-----------------------------------
-舞い散るアニメーション
-回転しつつ上から下へ
------------------------------------*/
-@keyframes sakura {
-    0% {
-      opacity: 0;
-    }
-    20% {
-      transform:translate(3px,30px) rotate(20deg);
-      opacity: 1;
-    }
-    30% {
-      transform:translate(0,50px) rotate(50deg);
-    }
-    50% {
-      transform:translate(-20px,100px)  rotate(150deg);
-    }
-    70% {
-      transform:translate(-40px,150px) rotate(-50deg);
-      opacity: .8;
-    }
-    90% {
-      transform:translate(-60px,200px) rotate(-180deg);
-    }
-    100% {
-      transform:translate(-70px,230px);
-      opacity: 0;
-    }
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sakura_parts_box img {
-    animation: sakura linear 6s infinite;
-    /*アニメーションが始まるまで画像を見えなくしておく*/
-    opacity: 0;
+.sakura h1 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 5rem;
+  color: #fff;
 }
 
-/*-----------------------------------
-アニメーションが始まるまでの時間
------------------------------------*/
-img.parts_01,img.parts_04,img.parts_07,img.parts_10,img.parts_08,img.parts_11,img.parts_13,img.parts_16,img.parts_19{
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+.sakura li{
+  position: absolute;
+  list-style: none;
+  top: -50px;
+  background: #ffdbed;
+  border-radius: 0% 70%;  
+  animation: fall 4s linear infinite, sway 2s ease-in-out infinite alternate;
 }
-img.parts_02,img.parts_05{
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+
+
+@keyframes fall {
+  to {
+    top: 120%;
+  }
 }
-img.parts_03,img.parts_06,img.parts_09,img.parts_12{
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+
+@keyframes sway1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(200px) rotate(-45deg);
+  }
 }
-img.parts_08,img.parts_11,img.parts_13,img.parts_16,img.parts_19{
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+
+@keyframes sway2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+  }
 }
-img.parts_14,img.parts_17{
-  -webkit-animation-delay: 2s;
+
+.sakura li:nth-child(1){
+  left: 0%;
+  width: 24px;
+  height: 15px;
+  animation: fall 10s linear infinite,
+             sway1 3s ease-in-out infinite alternate;
   animation-delay: 2s;
 }
-img.parts_15,img.parts_18{
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+
+.sakura li:nth-child(2){
+  left: 5%;
+  width: 13px;
+  height: 9px;
+  animation: fall 15s linear infinite,
+             sway1 2s ease-in-out infinite alternate;
+  animation-delay: 8s;
+}
+
+.sakura li:nth-child(3){
+  left: 15%;
+  width: 16px;
+  height: 10px;
+  animation: fall 9s linear infinite,
+             sway1 3.5s ease-in-out infinite alternate;
+  animation-delay: 13s;
+}
+
+.sakura li:nth-child(4){
+  left: 30%;
+  width: 16px;
+  height: 10px;
+  animation: fall 8s linear infinite,
+             sway2 4s ease-in-out infinite alternate;
+  animation-delay: 7s;
+}
+.sakura li:nth-child(5){
+  left: 40%;
+  width: 16px;
+  height: 10px;
+  animation: fall 10s linear infinite,
+             sway1 4s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+.sakura li:nth-child(6){
+  left: 55%;
+  width: 24px;
+  height: 15px;
+  animation: fall 11s linear infinite,
+             sway2 3s ease-in-out infinite alternate;
+  animation-delay: 3s;
+}
+.sakura li:nth-child(7){
+  left: 65%;
+  width: 16px;
+  height: 10px;
+  animation: fall 7s linear infinite,
+             sway2 3.5s ease-in-out infinite alternate;
+  animation-delay: 7s;
+}
+.sakura li:nth-child(8){
+  left: 50%;
+  width: 13px;
+  height: 9px;
+  animation: fall 7s linear infinite,
+             sway1 3s ease-in-out infinite alternate;
+  animation-delay: 3s;
+}
+.sakura li:nth-child(9){
+  left: 80%;
+  width: 16px;
+  height: 10px;
+  animation: fall 10s linear infinite,
+             sway2 4s ease-in-out infinite alternate;
+  animation-delay: 4s;
 }
