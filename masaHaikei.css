@@ -140,10 +140,4 @@ html {
   animation-delay: 4s;
 }
 <!=======================================================>
-.for-pc { display:block; }
-.for-sp { display:none; }
 
-@media only screen and (max-width : 767px){
-  .for-pc { display:none; }
-  .for-sp { display:block; }
-}
