@@ -4,6 +4,30 @@ body {
    background-attachment: fixed;
   }
 <!=================================>
+<div id="sakura_block">
+      <div class="sakura_parts_box">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_01.png" alt="" class="parts_01">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_02.png" alt="" class="parts_02">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_03.png" alt="" class="parts_03">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_04.png" alt="" class="parts_04">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_05.png" alt="" class="parts_05">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_06.png" alt="" class="parts_06">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_07.png" alt="" class="parts_07">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_01.png" alt="" class="parts_08">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_02.png" alt="" class="parts_09">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_03.png" alt="" class="parts_10">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_04.png" alt="" class="parts_11">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_05.png" alt="" class="parts_12">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_06.png" alt="" class="parts_13">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_07.png" alt="" class="parts_14">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_01.png" alt="" class="parts_15">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_02.png" alt="" class="parts_16">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_03.png" alt="" class="parts_17">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_04.png" alt="" class="parts_18">
+        <img src="https://adatype.co.jp/info/wp-content/uploads/2021/03/parts_05.png" alt="" class="parts_19">
+      </div>
+    </div>
+<!=================================>
 #sakura_block{
   width: 100%;
 }
