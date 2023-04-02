@@ -3,6 +3,7 @@ body {
   background-size: 100%;
    background-attachment: fixed;
   }
+body {
 <!=================================>
 <div id="sakura_block">
       <div class="sakura_parts_box">
@@ -131,4 +132,5 @@ img.parts_14,img.parts_17{
 img.parts_15,img.parts_18{
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
+}
 }
