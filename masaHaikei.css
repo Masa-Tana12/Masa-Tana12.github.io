@@ -6,74 +6,6 @@ body {
 <!===============Sakura==================>
  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap');
 
-#globalNav {
-  height: 70px;
-}
-#globalNav ul {
-  width: 900px;
-  margin: auto;
-}
-#globalNav li {
-  float: left;
-  _display: inline;
-  _zoom: 1;
-  background-image: url(../img/nav_sprite.png);
-}
-#globalNav li a {
-  text-indent: -9999px;
-  background-image: url(../img/nav_sprite.png);
-  display: block;
-  height: 70px;
-}
-#globalNav #gnIntrodution {
-  background-position: 0 -70px;
-}
-#globalNav #gnIntrodution a {
-  width: 172px;
-}
-#globalNav #gnCareer {
-  background-position: -172px -70px;
-}
-#globalNav #gnCareer a {
-  width: 104px;
-  background-position: -172px 0;
-}
-#globalNav #gnWorkVision {
-  background-position: -276px -70px;
-}
-#globalNav #gnWorkVision a {
-  width: 150px;
-  background-position: -276px 0;
-}
-#globalNav #gnPoem {
-  background-position: -426px -70px;
-}
-#globalNav #gnPoem a {
-  width: 103px;
-  background-position: -426px 0;
-}
-#globalNav #gnComment {
-  background-position: -529px -70px;
-}
-#globalNav #gnComment a {
-  width: 136px;
-  background-position: -529px 0;
-}
-#globalNav #gnWallpaper {
-  background-position: -665px -70px;
-}
-#globalNav #gnWallpaper a {
-  width: 102px;
-  background-position: -665px 0;
-}
-#globalNav #gnEntry {
-  background-position: -767px -70px;
-}
-#globalNav #gnEntry a {
-  width: 130px;
-  background-position: -767px 0;
-}
-
 html {
   width: 100%;
   height: 100vh;
@@ -207,15 +139,3 @@ html {
              sway2 4s ease-in-out infinite alternate;
   animation-delay: 4s;
 }
-<!=======================================================>
-@media screen and(max-width: 480px) {
-    img {
-    border: 0;
-    }
-    }
-@media screen and(min-width: 1280px) {
-    img {
-    border: 1px solid red;
-    }
-}
-
