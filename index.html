@@ -626,25 +626,70 @@ _:-ms-lang(x)::-ms-backdrop,
  <table>
 	<tr>
         <td>
-	       <div style="color: #364e96;/*文字色*/
+		            </script></b></div>
+	     <div style="color: #364e96;/*文字色*/
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
         border-radius: 0.5em;/*角丸*/">
+        <title>スロット</title>  
+</head>
 <body>
-	<table>
-  <div class="wrapper">
-	  <p><b>おみくじ</b></button><img src= "omikuzi.jfif" height = "60px">
-    <br>「おみくじを引く」をクリックしてください。
-　　<br>
-    <br>・・・表示形式・・・
-　　 <br>[ 大大吉 , 大吉 , 向大吉 , 末大吉 , 吉 , 中吉 , 小吉 , 末吉 , 末小吉 , 凶 , 大凶 ]</p>
-    <div class="wrapper-button">
-      <button id="button" class="button">おみくじを引く
-    </div>
-    <p id="result2"></p>
-  </div>
+ <p><b>スロット</b></a><img src= "slot.jfif" height = "60px">
+	    <br>「〇」をクリックしてください。(リセットをクリックすると再度遊ぶことができます。)
+            <br>
+	    <br>・・・表示形式・・・
+            <br>[ － :0点, ✕ :1点, ● :2点, ▲ :3点, ■ :4点, ♪ :5点, ￥ :6点, $ :7点, ★ :8点, ☆ :9点, 7 :10点 ]
+	    <br>最大点数 : 30点</p>
+<hr>
+<form name="slot">
+<table border="2">
+<tr>
+	<th colspan="3"><p><div id="score">0点</p></div></th>
+	</tr>
+	<tr>
+		<td><p><div id="dram0"> ☆ </p></div></td>
+		<td><p><div id="dram1"> ☆ </p></div></td>
+		<td><p><div id="dram2"> ☆ </p></div></td>
+	</tr>
+	<tr>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(0)"></p></td>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(1)"></p></td>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(2)"></p></td>
+	</tr>
+<tr>
+	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
+</tr>
+</P>
+                        <!=============slot game Souse Code==================>
+</table>
+</form>
+<script type="text/javascript">
+img = new Array(" － "," ✕ "," ● "," ▲ "," ■ "," ♪ "," ￥ "," $ "," ★ "," ☆ "," 7 ");
+dramreset();
+function dramreset() {
+document.getElementById("dram0").innerHTML = img[ 0 ];
+document.getElementById("dram1").innerHTML = img[ 0 ];
+document.getElementById("dram2").innerHTML = img[ 0 ];
+        document.slot.elements[ 0 ].disabled = false;
+	document.slot.elements[ 1 ].disabled = false;
+	document.slot.elements[ 2 ].disabled = false;
+scr = 0;
+}
+
+function dramstop(btn) {
+	r = Math.floor(Math.random() * 11);
+	document.getElementById("dram"+btn).innerHTML = img[r];
+document.slot.elements[btn].disabled = true;
+scr += r;
+	document.getElementById("score").innerHTML = scr + "点";
+}
+</script>
 </body>
+<br><br>
  </table>
+  </b></div>
+ </div> 
+
 		 <div style="color: #364e96;/*文字色*/
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
@@ -754,69 +799,25 @@ _:-ms-lang(x)::-ms-backdrop,
 	 </td>
 		    <td>				      
 			<div style="text-align:right">
-            </script></b></div>
-	     <div style="color: #364e96;/*文字色*/
+ <div style="color: #364e96;/*文字色*/
         border: solid 3px #364e96;/*線色*/
         padding: 0.5em;/*文字周りの余白*/
         border-radius: 0.5em;/*角丸*/">
-        <title>スロット</title>  
-</head>
 <body>
- <p><b>スロット</b></a><img src= "slot.jfif" height = "60px">
-	    <br>「〇」をクリックしてください。(リセットをクリックすると再度遊ぶことができます。)
-            <br>
-	    <br>・・・表示形式・・・
-            <br>[ － :0点, ✕ :1点, ● :2点, ▲ :3点, ■ :4点, ♪ :5点, ￥ :6点, $ :7点, ★ :8点, ☆ :9点, 7 :10点 ]
-	    <br>最大点数 : 30点</p>
-<hr>
-<form name="slot">
-<table border="2">
-<tr>
-	<th colspan="3"><p><div id="score">0点</p></div></th>
-	</tr>
-	<tr>
-		<td><p><div id="dram0"> ☆ </p></div></td>
-		<td><p><div id="dram1"> ☆ </p></div></td>
-		<td><p><div id="dram2"> ☆ </p></div></td>
-	</tr>
-	<tr>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(0)"></p></td>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(1)"></p></td>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(2)"></p></td>
-	</tr>
-<tr>
-	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
-</tr>
-</P>
-                        <!=============slot game Souse Code==================>
-</table>
-</form>
-<script type="text/javascript">
-img = new Array(" － "," ✕ "," ● "," ▲ "," ■ "," ♪ "," ￥ "," $ "," ★ "," ☆ "," 7 ");
-dramreset();
-function dramreset() {
-document.getElementById("dram0").innerHTML = img[ 0 ];
-document.getElementById("dram1").innerHTML = img[ 0 ];
-document.getElementById("dram2").innerHTML = img[ 0 ];
-        document.slot.elements[ 0 ].disabled = false;
-	document.slot.elements[ 1 ].disabled = false;
-	document.slot.elements[ 2 ].disabled = false;
-scr = 0;
-}
-
-function dramstop(btn) {
-	r = Math.floor(Math.random() * 11);
-	document.getElementById("dram"+btn).innerHTML = img[r];
-document.slot.elements[btn].disabled = true;
-scr += r;
-	document.getElementById("score").innerHTML = scr + "点";
-}
-</script>
+	<table>
+  <div class="wrapper">
+	  <p><b>おみくじ</b></button><img src= "omikuzi.jfif" height = "60px">
+    <br>「おみくじを引く」をクリックしてください。
+　　<br>
+    <br>・・・表示形式・・・
+　　 <br>[ 大大吉 , 大吉 , 向大吉 , 末大吉 , 吉 , 中吉 , 小吉 , 末吉 , 末小吉 , 凶 , 大凶 ]</p>
+    <div class="wrapper-button">
+      <button id="button" class="button">おみくじを引く
+    </div>
+    <p id="result2"></p>
+  </div>
 </body>
-<br><br>
  </table>
-  </b></div>
- </div> 
 		    </td>
 		</tr>
         </table>   
