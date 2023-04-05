@@ -776,6 +776,15 @@ _:-ms-lang(x)::-ms-backdrop,
          <br>　&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		 ソースコードが記載されているGoogleDriveのページに切り替えられます。
          <br>
+		 <center>
+		 <p>
+			 <・・・Minigame display format or description・・・>
+				 </p>
+		</center>
+		 <br>おみくじ: [ 大大吉 , 大吉 , 向大吉 , 末大吉 , 吉 , 中吉 , 小吉 , 末吉 , 末小吉 , 凶 , 大凶 ]
+		 <br>ポーカー: [ ノーハンド , ワンペア , ツーペア , スリーカード, フォーカード , ファイブカード , フルハウス ]
+		 <br>マリオ操作方法：矢印キー(←/→)で左右に動かし、「X」ボタンでジャンプすることができます。
+		 <br>スロット：<br>[ － :0点, ✕ :1点, ● :2点, ▲ :3点, ■ :4点 , ♪ :5点,￥ :6点, $ :7点, ★ :8点, ☆ :9点, 7 :10点 ]
          <br>
          </div>
        <article id="Game">
@@ -798,12 +807,6 @@ _:-ms-lang(x)::-ms-backdrop,
         border-radius: 0.5em;/*角丸*/">
         <p><b>ポーカー</b><img src= "toranp.jfif" height = "60px">
 		    <br>「f5キーを押す、またはページ更新する」と遊ぶことができます。</p>
-	<center>
-		<p>
-			・・・表示形式・・・
-		</p>[ ノーハンド , ワンペア , ツーペア , スリーカード ]
-		<br>[ フォーカード , ファイブカード , フルハウス ]
-			 </center>		
 	<center><p><b>
         <table border="1">
             <tr>
@@ -895,9 +898,6 @@ _:-ms-lang(x)::-ms-backdrop,
        （現在、形としてはできていますが専門学校残り一年間さらに試行錯誤し、
 		<br>スコア設定や制限時間のタイマー設定、ゴール判定やkill判定など組み込みたいと考えています。)
        <br>※...パソコンでお楽しみください...
-       <br>
-       <p>☆…操作方法…☆
-	       <br>矢印キー(←/→)で左右に動かし、「X」ボタンでジャンプすることができます。</p><br>
 	</center>
         &emsp;<a href="mario.html">Let`s play Mario♪</a>
             <br><br>
@@ -916,10 +916,7 @@ _:-ms-lang(x)::-ms-backdrop,
   <div class="wrapper">
 	  <p><b>おみくじ</b></button><img src= "omikuzi.jfif" height = "60px">
     <br>「おみくじを引く」をクリックしてください。
-　　<br>
-    <br>・・・表示形式・・・
-　　 <br>[ 大大吉 , 大吉 , 向大吉 , 末大吉 , 吉 , 中吉 ]
-		<br>[ 小吉 , 末吉 , 末小吉 , 凶 , 大凶 ]</p>
+　　 <br></p>
     <div class="wrapper-button">
       <button id="button" class="button">おみくじを引く
     </div>
@@ -990,10 +987,33 @@ scr += r;
 		    <td>				      
 			<div style="text-align:right">
 				<canter><p>
-				 <br>・・・表示形式・・・
-            <br>[ － :0点, ✕ :1点, ● :2点, ▲ :3点, ■ :4点]
-					<br>[ ♪ :5点,￥ :6点, $ :7点, ★ :8点, ☆ :9点, 7 :10点 ]
-	    <br>最大点数 : 30点
+				  <table>
+	<tr>
+        <td>
+<hr>
+<form name="slot">
+<table border="2">
+<tr>
+	<th colspan="3"><p><div id="score">0点</p></div></th>
+	</tr>
+	<tr>
+		<td><p><div id="dram0"> ☆ </p></div></td>
+		<td><p><div id="dram1"> ☆ </p></div></td>
+		<td><p><div id="dram2"> ☆ </p></div></td>
+	</tr>
+	<tr>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(0)"></p></td>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(1)"></p></td>
+		<td><p><input type="button" value=" 〇 " onClick="dramstop(2)"></p></td>
+	</tr>
+<tr>
+	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
+</tr>
+</P>
+                        <!=============slot game Souse Code==================>
+</table>
+</form>
+            
 					</p></canter>
 	  </div> 
 		    </td>
