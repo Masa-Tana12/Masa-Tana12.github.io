@@ -1042,58 +1042,6 @@ scr += r;
  </td>
 		    <td>				      
 			<div style="text-align:right">
-				<table><center>
-				<form name="slot">
-<table border="3">
-<tr>
-	<th colspan="3"><p><div id="score">0点</p></div></th>
-	</tr>
-	<tr>
-		<td><p><div id="dram3"> ☆ </p></div></td>
-		<td><p><div id="dram4"> ☆ </p></div></td>
-		<td><p><div id="dram5"> ☆ </p></div></td>
-	</tr>
-	<tr>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(3)"></p></td>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(4)"></p></td>
-		<td><p><input type="button" value=" 〇 " onClick="dramstop(5)"></p></td>
-	</tr>
-<tr>
-	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
-</tr>
-</P>
-
-                        <!=============slot game Souse Code==================>
-</table>
-</form>
-<script type="text/javascript">
-img = new Array(" － "," ✕ "," ● "," ▲ "," ■ "," ♪ "," ￥ "," $ "," ★ "," ☆ "," 7 ");
-dramreset();
-function dramreset() {
-document.getElementById("dram3").innerHTML = img[ 0 ];
-document.getElementById("dram4").innerHTML = img[ 0 ];
-document.getElementById("dram5").innerHTML = img[ 0 ];
-        document.slot.elements[ 3 ].disabled = false;
-	document.slot.elements[ 4 ].disabled = false;
-	document.slot.elements[ 5 ].disabled = false;
-scr = 0;
-}
-
-function dramstop(btn) {
-	r = Math.floor(Math.random() * 11);
-	document.getElementById("dram"+btn).innerHTML = img[r];
-document.slot.elements[btn].disabled = true;
-scr += r;
-	document.getElementById("score").innerHTML = scr + "点";
-}
-</script>
-</center>
- </td>
-				
-</table>
-</form>
-            
-					</p></canter>
 	  </div> 
 		    </td>
 		</tr>
