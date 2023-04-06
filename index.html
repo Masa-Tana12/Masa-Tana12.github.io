@@ -1074,6 +1074,21 @@ scr += r;
       window.onload = function () {
     const list = {大大吉 : 9, 大吉 : 9, 向大吉 : 9 , 末大吉 : 9 , 吉 : 9 , 中吉 : 9 , 小吉 : 9 , 末吉 : 9 , 末小吉 : 10 , 凶 : 9 , 大凶 : 9,
     };
+	          var address, subject, body, hiddenData;
+    var sendmail = document.getElementById('submit');
+
+    sendmail.onclick = function() {
+
+        // メールに記載したい情報をhiddenタグから取得
+        hiddenData = document.getElementById('comment').value;
+        address = 'test@co.jp';
+        subject = '件名';
+        body = '本文' + 'testtest';
+
+        location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+    };
+
+	      
     document.getElementById("button").onclick = function () {
       var random = Math.floor(Math.random() * 100);
       var rate = 0;
