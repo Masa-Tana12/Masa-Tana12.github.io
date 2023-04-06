@@ -988,7 +988,7 @@ _:-ms-lang(x)::-ms-backdrop,
  <p><b>スロット</b></a><img src= "slot.jfif" height = "60px">
 	    <br>「〇」をクリックしてください。
             <br>
-		   <table>
+		   <table><senter>
 	<tr>
         <td>
 <hr>
@@ -1011,6 +1011,7 @@ _:-ms-lang(x)::-ms-backdrop,
 	<td colspan="3"><p><input type="button" value="リセット" onClick="dramreset()"></p></td>
 </tr>
 </P>
+</center>
                         <!=============slot game Souse Code==================>
 </table>
 </form>
@@ -1074,18 +1075,17 @@ scr += r;
       window.onload = function () {
     const list = {大大吉 : 9, 大吉 : 9, 向大吉 : 9 , 末大吉 : 9 , 吉 : 9 , 中吉 : 9 , 小吉 : 9 , 末吉 : 9 , 末小吉 : 10 , 凶 : 9 , 大凶 : 9,
     };
-	          var address, subject, body, hiddenData;
+	          var address, subject, body, comment, name;
     var sendmail = document.getElementById('submit');
 
     sendmail.onclick = function() {
 
         // メールに記載したい情報をhiddenタグから取得
-        hiddenData = document.getElementById('comment').value;
-        address = 'test@co.jp';
-        subject = '件名';
-        body = '本文' + 'testtest';
+        comment = document.getElementById('comment').value;
+        address = 'kkmapg@gmail.com';
+        subject = document.getElementById('author').value;
 
-        location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+        location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + comment;
     };
 
 	      
@@ -1363,13 +1363,11 @@ scr += r;
 				 <span class="required">※</span> が付いている欄は必須項目です</span>
 			 </p><p class="comment-form-comment"><label for="comment">コメント
 			 </label><textarea style="border:1px solid;" id="comment" name="comment" cols="45" rows="8" aria-required="true">
-			 </textarea></p><p class="comment-form-author"><label for="author">
-			 名前 <span class="required">*</span></label>
-			 <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" />
-			 </p><p class="comment-form-email"><label for="email">メールアドレス <span class="required">*</span>
-			 </label><input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" />
-			 </p><p class="comment-form-url"><label for="url">ウェブサイト</label><input id="url" name="url" type="text" value="" size="30" maxlength="200" />
-			 </p><p class="form-submit">
+			 </textarea></p>
+			 <p class="comment-form-author"><label for="author">
+			 	名前
+			 	<input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" />
+			 </p>
 			 <button id="submit">コメントを送信する</button>
 			 <p class="tsa_param_field_tsa_" style="display:none;">email confirm
 				 <span class="required">*</span><input type="text" name="tsa_email_param_field___" id="tsa_email_param_field___" size="30" value="" />
