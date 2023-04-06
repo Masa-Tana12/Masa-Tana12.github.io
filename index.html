@@ -32,6 +32,103 @@
         <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js">
 	    </script>
     </body>
+	<table>
+		<nav role="navigation">
+  <ul>
+    <li class="menu-item-has-children">
+      <a href="#">Coding ▼</a>
+      <ul class="sub-menu">
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">WordPress</a></li>
+        <li><a href="#">jQuery</a></li>
+        <li><a href="#">SVG</a></li>
+      </ul>
+    </li>
+    <li class="menu-item-has-children">
+      <a href="#">Design ▼</a>
+      <ul class="sub-menu">
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Fonts</a></li>
+        <li><a href="#">Colour</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Tips</a></li>
+    <li><a href="#">For Beginner</a></li>
+  </ul>
+</nav>
+	<style>
+	<!-------------CSS----------->
+		nav {
+  font: 18px/1.7 "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ","ＭＳ Ｐゴシック",Helvetica,Sans-Serif;
+  margin: 20px;
+}
+
+/* 親メニュー - Parent nav */
+nav > ul > li {
+  position: relative;
+  float: left;
+  margin-right: 45px;
+}
+nav a {
+  color: #0bd;
+  text-decoration: none;
+}
+nav ul a:hover {
+  color: #0090aa;
+}
+
+/* 子メニュー - .sub-menu */
+nav .sub-menu {
+  position: absolute;
+  width: 180px;
+  background: #0bd;
+  top: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+nav .sub-menu a {
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+nav .sub-menu a:hover {
+  color: #fff;
+}
+
+/* ホバー＆フォーカスで子メニュー表示 */
+/* Display sub menu by hover & focus */
+nav .menu-item-has-children:hover ul,
+nav .menu-item-has-children ul.focused {
+  opacity: 1;
+  visibility: visible;
+}
+nav li.menu-item-has-children li a:hover,
+nav li.menu-item-has-children li a:focus {
+  background: #0090aa;
+}
+		</style>
+		<style>
+		<!---------------JS---------------->
+		<style>
+		$(function() {
+
+  $('.menu-item-has-children > a').focus( function () {
+    $(this).siblings('.sub-menu').addClass('focused');
+  }).blur(function(){
+    $(this).siblings('.sub-menu').removeClass('focused');
+  });
+
+// For children
+  $('.sub-menu a').focus( function () {
+    $(this).parents('.sub-menu').addClass('focused');
+  }).blur(function(){
+    $(this).parents('.sub-menu').removeClass('focused');
+  });
+});	
+	</style>
+	</table>
 <body>
 		<ul class="sakura">
   <li></li>
@@ -54,264 +151,6 @@
             color: #495193;">TanaMasa Blog</div></h2></center>
         <br>
 	      <!===============manu====================================>
-	    <!====================test===================>
-	    <table>
-		    <div class="header__btn">
-		<a href="https://www.itc.ac.jp/request/">
-			<span class="icon"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/icon-document.png" alt=""></span>
-			<span class="txt">資料請求</span>
-		</a>
-	</div>
-
-	<button type="button" class="header__toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#nav-menu">
-		<span class="header__toggle-txt">MENU</span>
-		<span class="header__toggle-bar"></span>
-		<span class="header__toggle-bar"></span>
-		<span class="header__toggle-bar"></span>
-	</button>
-
-	<div class="header__nav-wrapper navbar-offcanvas" id="nav-menu">
-		<nav class="nav-global">
-			<ul class="nav-global__list">
-				<li class="nav-global__item visible-xs">
-					<a href="https://www.itc.ac.jp" data-isCurrent='true'>
-						トップページ
-					</a>
-				</li>
-
-				<li class="nav-global__item nav-global__item--dropdown">
-					<a href="https://www.itc.ac.jp/course/" >
-						学科案内
-					</a>
-					<div class="dropdown-menu">
-						<div class="dropdown-menu__container container-lg">
-							<div class="dropdown-menu__top">
-								<div class="dropdown-menu__ttl">
-									<p class="dropdown-menu__ttl-en">DEPARTMENT</p>
-									<p class="dropdown-menu__ttl-ja">学科案内</p>
-								</div>
-								<a href="https://www.itc.ac.jp/course/" class="dropdown-menu__btn btn btn--gray">詳しく見る<span class="link-arrow btn__icon--right"></span></a>
-							</div>
-							<ul class="dropdown-nav">
-								<li class="dropdown-nav__item dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/engineer/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-engineer.jpg" alt="ITスペシャリスト科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">ITスペシャリスト科</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/information_proccessing/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-information_proccessing.jpg" alt="高度情報処理科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">高度情報処理科</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/information_system/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-information_system.jpg" alt="情報システム科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">情報システム科</p>
-									</a>
-								</li>
-<!-- ◆削除@230405
-								<li class="dropdown-nav__item dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/network/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-network.jpg" alt="情報ネットワーク科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">情報ネットワーク科</p>
-									</a>
-								</li>
--->
-								<li class="dropdown-nav__item  dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/game/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-game.jpg" alt="ゲームクリエイター科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">ゲームクリエイター科</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item  dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/cg_design/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-cg_design.jpg" alt="Web・CGデザイン科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">Web・CGデザイン科</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item dropdown-nav__item--double dropdown-nav__item--sm">
-									<a href="https://www.itc.ac.jp/course/construction_design/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-course-construction_design.jpg" alt="建築設計科"></figure>
-										</div>
-										<p class="dropdown-nav__txt">建築設計科</p>
-									</a>
-									<a href="https://www.itc.ac.jp/course/architecture_speciality/">
-										<p class="dropdown-nav__txt">建築士専攻科</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</li>
-
-				<li class="nav-global__item nav-global__item--dropdown">
-					<a href="https://www.itc.ac.jp/college/" >
-						学校案内
-					</a>
-					<div class="dropdown-menu">
-						<div class="dropdown-menu__container container-lg">
-							<div class="dropdown-menu__top">
-								<div class="dropdown-menu__ttl">
-									<p class="dropdown-menu__ttl-en">ABOUT</p>
-									<p class="dropdown-menu__ttl-ja">学校案内</p>
-								</div>
-								<a href="https://www.itc.ac.jp/college/" class="dropdown-menu__btn btn btn--gray">詳しく見る<span class="link-arrow btn__icon--right"></span></a>
-							</div>
-							<ul class="dropdown-nav">
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/infographics/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-infographics.jpg" alt="数字で見る国際理工"></figure>
-										</div>
-										<p class="dropdown-nav__txt">数字で見る国際理工</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/education/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-education.jpg" alt="キャンパスライフ"></figure>
-										</div>
-										<p class="dropdown-nav__txt">キャンパスライフ</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/teacher/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-teacher.jpg" alt="先生紹介"></figure>
-										</div>
-										<p class="dropdown-nav__txt">先生紹介</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/message/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-message.jpg" alt="学校長挨拶・沿革"></figure>
-										</div>
-										<p class="dropdown-nav__txt">学校長挨拶・沿革</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/disclosure/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-disclosure.jpg" alt="学校情報公開"></figure>
-										</div>
-										<p class="dropdown-nav__txt">学校情報公開</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/college/access/">
-										<div class="dropdown-nav__thumb">
-											<figure class="dropdown-nav__thumb-inner js-photo-ofi js-photo-ofi--cover"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/img-college-access.jpg" alt="アクセス"></figure>
-										</div>
-										<p class="dropdown-nav__txt">アクセス</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</li>
-
-				<li class="nav-global__item nav-global__item--dropdown">
-					<a href="https://www.itc.ac.jp/admission/" >
-						入学案内
-					</a>
-					<div class="dropdown-menu">
-						<div class="dropdown-menu__container container-lg">
-							<div class="dropdown-menu__top">
-								<div class="dropdown-menu__ttl">
-									<p class="dropdown-menu__ttl-en">ADMISSION</p>
-									<p class="dropdown-menu__ttl-ja">入学案内</p>
-								</div>
-								<a href="https://www.itc.ac.jp/admission/" class="dropdown-menu__btn btn btn--gray">詳しく見る<span class="link-arrow btn__icon--right"></span></a>
-							</div>
-							<ul class="dropdown-nav">
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/application/">
-										<p class="dropdown-nav__txt">募集学科</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/info/">
-										<p class="dropdown-nav__txt">入学資格と出願書類</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/examination/">
-										<p class="dropdown-nav__txt">入学試験(AO、推薦、一般)</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/expenses/">
-										<p class="dropdown-nav__txt">学費について</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/support_plan/">
-										<p class="dropdown-nav__txt">学費サポートプラン</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/support_system/">
-										<p class="dropdown-nav__txt">その他制度</p>
-									</a>
-								</li>
-								<li class="dropdown-nav__item">
-									<a href="https://www.itc.ac.jp/admission/foreign/">
-										<p class="dropdown-nav__txt">留学生の方へ</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</li>
-
-				<li class="nav-global__item">
-					<a href="https://www.itc.ac.jp/interview/" >
-						学生<br class="visible-sm">インタビュー
-					</a>
-				</li>
-
-				<li class="nav-global__item">
-					<a href="https://www.itc.ac.jp/job/" >
-						就職支援
-					</a>
-				</li>
-
-				<li class="nav-global__item">
-					<a href="https://www.itc.ac.jp/opencampus/" >
-						オープン<br class="visible-sm">キャンパス
-					</a>
-				</li>
-
-				<li class="nav-global__item nav-global__item--btn">
-					<a href="https://www.itc.ac.jp/request/" >
-						<span class="icon"><img src="https://www.itc.ac.jp/_cms/wp-content/themes/itc1.1.0/assets/img/common/icon-document.png" alt=""></span>
-						<span class="txt">資料請求</span>
-					</a>
-				</li>
-
-			</ul>
-		</nav>
-	</div>
-
-</header>
-		</table>
-	    <!===========================================>
 	  <table>
 		  	<header id="mainVisual">
 		   <div style="position: 
