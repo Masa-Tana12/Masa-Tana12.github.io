@@ -173,6 +173,111 @@
 	 </center>
     </div>
 </article>
+<!---------------------------練習メニュー-------------->
+		 <ul id="dropmenu" style="clear:both;">
+<li><a href="/">大項目１</a>
+</li>
+<li><a href="/">大項目２</a>
+<ul>
+<li><a href="/">小項目１</a></li>
+<li><a href="/">小項目２</a></li>
+<li><a href="/">小項目３</a></li>
+<li><a href="/">小項目４</a></li>
+<li><a href="/">小項目５</a></li>
+<li><a href="/">小項目６</a></li>
+<li><a href="/">小項目７</a></li>
+</ul>
+</li>
+<li><a href="/">大項目２</a>
+<ul>
+<li><a href="/">小項目１</a></li>
+<li><a href="/">小項目２</a></li>
+</ul>
+</li>
+<li><a href="/">大項目３</a>
+</li>
+<li><a href="/">大項目４</a>
+</li>
+</ul>
+	<style>
+		#dropmenu {
+position: relative;
+list-style-type: none;
+width: 640px;
+height: 30px;
+margin: 20px 0 20px 0;
+padding: 0;
+background: #fff;
+border-bottom: 1px solid #007CC3;
+border-radius: 3px 3px 0 0;
+}
+#dropmenu li {
+width: 18%;
+float: left;
+margin: 0;
+padding: 0;
+text-align: center;
+border-right:1px #fff solid;
+}
+#dropmenu li a {
+display: block;
+margin: 0;
+padding: 10px 0 6px;
+color: #000;
+background: #ededed;
+font-size: 14px;
+line-height: 1;
+text-decoration: none;
+}
+#dropmenu li ul {
+position: absolute;
+top: 100%;
+right: 39px;
+list-style: none;
+margin: 0;
+border-radius: 0 0 3px 3px;
+}
+#dropmenu li ul li{
+overflow: hidden;
+width: 600px;
+height: 0;
+color: #000;
+-moz-transition: .2s;
+-webkit-transition: .2s;
+-o-transition: .2s;
+-ms-transition: .2s;
+transition: .2s;
+}
+#dropmenu li ul li a{
+padding: 10px 15px;
+background: #E8F6FF;
+text-align: left;
+font-size: 12px;
+font-weight: normal;
+}
+#dropmenu li:hover > a{
+background: #CFE6F7;
+color: #007CC3;
+}
+#dropmenu > li:hover > a{
+border-radius: 3px 3px 0 0;
+}
+#dropmenu li:hover ul li{
+overflow: visible;
+height: 29px;
+border-top: 1px solid #007CC3;
+
+}
+#dropmenu li:hover ul li:first-child{
+border-top: 0;
+}
+#dropmenu li:hover ul li:last-child{
+border-bottom: 0;
+}
+#dropmenu li:hover ul li:last-child a{
+border-radius: 0 0 3px 3px;
+}
+		  </style>
 	<style>
 		
 #globalNav  {
