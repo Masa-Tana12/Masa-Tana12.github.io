@@ -1,0 +1,19 @@
+  <div style="color: #364e96;/*文字色*/
+        border: solid 3px #364e96;/*線色*/
+        padding: 0.5em;/*文字周りの余白*/
+        border-radius: 0.5em;/*角丸*/">
+<body>
+	<table>
+  <div class="wrapper">
+	  <p><b>おみくじ</b></button><img src= "omikuzi.jfif" height = "60px">
+    <br>「おみくじを引く」をクリックしてください。
+　　<br>
+    <br>・・・表示形式・・・
+　　 <br>[ 大大吉 , 大吉 , 向大吉 , 末大吉 , 吉 , 中吉 , 小吉 , 末吉 , 末小吉 , 凶 , 大凶 ]</p>
+    <div class="wrapper-button">
+      <button id="button" class="button">おみくじを引く
+    </div>
+    <p id="result2"></p>
+  </div>
+</body>
+ </table>

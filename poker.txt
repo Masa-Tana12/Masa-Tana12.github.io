@@ -1,0 +1,77 @@
+<table border="1">
+            <tr>
+                <td>
+                    <script type="text/JavaScript">
+                        var num = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0);
+                        var random1 = Math.floor( Math.random() * 13 + 1 );
+                        var k1 = random1;
+                        num[random1 - 1] = num[random1 - 1] + 1;
+                        document.write(random1);
+                    </script>
+                </td>
+                <td>
+                    <script type="text/JavaScript">
+                        var random2 = Math.floor( Math.random() * 13 + 1 );
+                        var k2 = random2;
+                        num[random2- 1] = num[random2 - 1] + 1;
+                        document.write(random2);
+                    </script>
+                </td>
+                <td>
+                    <script type="text/JavaScript">
+                        var random3 = Math.floor( Math.random() * 13 + 1 );
+                        var k3 = random3;
+                        num[random3 - 1] = num[random3 - 1] + 1;
+                        document.write(random3);
+                    </script>
+                </td>
+                <td>
+                    <script type="text/JavaScript">
+                        var random4 = Math.floor( Math.random() * 13 + 1 );
+                        var k4 = random4;
+                        num[random4 - 1] = num[random4 - 1] + 1;
+                        document.write(random4);
+                    </script>
+                </td>
+                <td>
+                    <script type="text/JavaScript">
+                        var random5 = Math.floor( Math.random() * 13 + 1 );
+                        var k5 = random5;
+                        num[random5 - 1] = num[random5 - 1] + 1;
+                        document.write(random5);
+                    </script>
+                </td>
+        </table>
+        <b><script type="text/JavaScript">
+                     var pea = 0;
+                     var three = 0;
+                     var four = 0;
+                        var five = 0;
+                        for(let i = 0; i<13; i++){
+                            if(num[i] == 5){
+                          five = 1;
+                }else if(num[i] == 4){
+                    four = 1;
+                }else if(num[i] == 3){
+                    three =1;
+                }else if(num[i] == 2){
+                    pea = pea + 1;
+                }
+            }
+            if(five == 1){
+                document.write('ファイブカード！');    
+            }else if(four == 1){
+                document.write('フォーカード！');
+            }else if(three == 1 && pea == 1){
+                document.write('フルハウス！');
+            }else if(three == 1){
+                document.write('スリーカド！');
+            }else if(pea == 2){
+                document.write('ツーペア！');
+            }else if(pea == 1){
+                document.write('ワンペア！');
+            }else{
+                document.write('ノーハンド');
+            }
+
+            </script>
