@@ -1407,12 +1407,14 @@ scr += r;
 					 コメントをキャンセル</a>
 				 </small>
 			 </h3>
-			 メールアドレスが公開されることはありません。/ このコメントは私個人宛Gmailに送信されます。</span>
+			 メールアドレスが公開されることはありません。
+			 <br>&esmp;このコメントは私個人宛Gmailに送信されます。</span>
 			 <span class="required-field-message">
-				 <span class="required">※</span> が付いている欄は必須項目です</span>
-			 </p><p class="comment-form-comment"><label for="comment">コメント:
-			 </label><textarea style="border:1px solid;" id="comment" name="comment" cols="45" rows="8" aria-required="true">
-			 </textarea></p>
+				 <br><span class="required">※</span> が付いている欄は必須項目です</span>
+			 </p><p class="comment-form-comment"><label for="comment">
+			 <div style="text-align:left">コメント:</div>
+			 </label><center><textarea style="border:1px solid;" id="comment" name="comment" cols="45" rows="8" aria-required="true">
+			 </textarea></p></center>
 			  <p class="comment-form-author"><label for="author">
 			 	※貴社様の会社名:
 			 	<input id="author" companyname="author" type="text" value="" size="30" maxlength="245" aria-required="true" />
@@ -1423,9 +1425,11 @@ scr += r;
 			 </p>
 				 <button id="submit"><center><p>コメントを送信する</p></center></button>
 			 <p class="tsa_param_field_tsa_" style="display:none;">email confirm
-				 <span class="required">*</span><input type="text" name="tsa_email_param_field___" id="tsa_email_param_field___" size="30" value="" />
+				 <span class="required">*</span><input type="text" companyname="tsa_email_param_field___"name="tsa_email_param_field___" 
+				id="tsa_email_param_field___" size="30" value="" />
 			 </p><p class="tsa_param_field_tsa_2" style="display:none;">post date<span class="required">*</span>
-			 <input type="text" name="tsa_param_field_tsa_3" id="tsa_param_field_tsa_3" size="30" value="2023-04-02 21:09:23" />
+			 <input type="text" companyname="tsa_param_field_tsa_3"name="tsa_param_field_tsa_3" 
+				id="tsa_param_field_tsa_3" size="30" value="2023-04-02 21:09:23" />
 			 </p><p id="throwsSpamAway">日本語が含まれない投稿は無視されますのでご注意ください。（スパム対策）</p></div>
 		 <!-- #respond --></div><!--/comments-->
 		 
