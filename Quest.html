@@ -1,0 +1,32 @@
+<div id="message_window"></div>
+<button onclick="message('メッセージが左から右へ1文字ずつ表示されます。');">表示</button>
+
+<script>
+var msg_buff = '';
+function message(msg)
+{
+	if (msg_buff == '') {
+		msg_buff += msg + "\n";
+		message_char();
+	} else {
+		msg_buff += msg + "\n";
+	}
+}
+function message_char()
+{
+	if (msg_buff == '') {
+		//メッセージバッファに文字がなければ何もしない
+		return;
+	}
+	//メッセージバッファの先頭1文字を取得
+	var c = msg_buff.slice(0, 1)
+	if (c == "\n") {
+		c = '<br>';//改行の場合はタグへ変換
+	}
+	document.getElementById('message_window').innerHTML += c;
+	//メッセージバッファから先頭1文字を削除
+	msg_buff = msg_buff.slice(1);
+	//
+	setTimeout('message_char()', 30);
+}
+</script>
