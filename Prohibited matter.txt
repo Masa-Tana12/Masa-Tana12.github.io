@@ -1,12 +1,23 @@
+
+Explanation of prohibited items.
+
+I will report to the police if any of the prohibited items is done.
+
 1_It is forbidden to post the source code used in this homepage to other places without the author's permission.
+
 
 2_It is prohibited to convert the source code without permission from the creator.
 
+
 3_Criminal acts such as inappropriate modification of source code are prohibited.
+
 
 4_Some of the images used are free images, but some are taken by the creators themselves. It is prohibited to save and post in other places without the permission of the creator.
 
+
 5_For security reasons, we will record the IP addresses of all visitors.
+
 
 6_It is prohibited to post anything that may be detrimental to the creator's school, such as bad publicity,
    on bulletin boards, etc.
+   
